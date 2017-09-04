@@ -1,0 +1,30 @@
+<div id="new_movie" class="center">
+  <h1>New Movie</h1>
+</div>
+
+<div class="center">
+  <%= form_for :movie, url: movies_path, method: :post do |form| %>
+        <div>
+            <%= form.text_field :name, placeholder: "Name" %>
+        </div>
+        <br>
+        <div>
+            <%= form.text_field :director, placeholder: "Director" %>
+        </div>
+        <br>
+        <div>
+            <%= form.text_field :category, placeholder: "Category" %>
+        </div>
+        <br>
+        <div>
+            <%= form.text_field :year, placeholder: "Year" %>
+        </div>
+        <br>
+        <div>
+            <%= form.text_field :rating, placeholder: "Rating" %>
+        </div>
+        <br>
+        <%= form.submit "Submit", class: 'btn btn-success btn-lg' %>
+        <%= link_to "Cancel", movies_path, class: 'btn btn-danger btn-lg' %>
+<% end %>
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NeeruTest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= link_to "Movies", root_path, class: "navbar-brand" %>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <% if notice %>
+            <div class="notice"><%= notice %></div>
+        <% end %>
+        <% if alert %>
+            <div class="alert"><%= alert %></div>
+        <% end %>
+        <div class="span12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+
